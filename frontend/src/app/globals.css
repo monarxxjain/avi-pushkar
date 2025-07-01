@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@keyframes soft-bounce {
+    0%, 100% {
+      transform: translateY(-10%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+  
+.animate-soft-bounce {
+    animation: soft-bounce 1.5s infinite;
+}
+  
