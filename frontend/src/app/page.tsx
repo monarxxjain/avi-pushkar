@@ -13,6 +13,7 @@ export default function Home() {
         console.log(data);
 
         const hero = data?.sections.find(
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (section: any): section is HeroSectionType =>
             section._type === "heroSection"
         );

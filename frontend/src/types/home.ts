@@ -20,6 +20,6 @@
   
   export type HomePageContent = {
     title: string;
-    sections: HeroSectionType[] | any[]; // Replace `any` with union of future section types
+    sections: HeroSectionType[];
   };
   
