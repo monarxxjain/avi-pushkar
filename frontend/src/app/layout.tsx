@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PlayFlow - Artistic Toys for Adults",
+  title: "Avi Pushkar - Juggling and Fire Toys",
   description: "Showcasing premium poi, juggling balls, fire toys, and more. Contact us on Instagram to buy.",
 };
 
