@@ -1,13 +1,13 @@
 import { getAllProducts } from "@/sanity/fetchContent/Products";
 import { SingleProductPage } from "@/components/products/SingleProductPage";
 
-type Props = {
+type PageProps = {
   params: {
     slug: string;
   };
 };
 
-export default async function ProductDetails({ params }: Props) {
+export default async function ProductDetails({ params }: PageProps) {
   const products = await getAllProducts();
   const product = products.find(p => p.slug.current === params.slug);
 
