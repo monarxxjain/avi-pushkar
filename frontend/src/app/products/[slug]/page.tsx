@@ -2,6 +2,7 @@ import { getAllProducts } from "@/sanity/fetchContent/Products";
 import { SingleProductPage } from "@/components/products/SingleProductPage";
 import { notFound } from "next/navigation";
 
+// @ts-ignore
 export default async function ProductDetails({
   params,
 }: {
