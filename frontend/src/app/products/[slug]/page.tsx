@@ -2,12 +2,8 @@ import { getAllProducts } from "@/sanity/fetchContent/Products";
 import { SingleProductPage } from "@/components/products/SingleProductPage";
 import { notFound } from "next/navigation";
 
-// @ts-ignore
-export default async function ProductDetails({
-  params,
-}: {
-  params: { slug: string };
-}) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function ProductDetails({params}: any) {
   const products = await getAllProducts();
   const product = products.find((p) => p.slug.current === params.slug);
 
