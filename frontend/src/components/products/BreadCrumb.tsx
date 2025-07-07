@@ -13,7 +13,7 @@ export const BreadCrumb = ({ selectedCategory, setSelectedCategory }: Props) => 
             <ul className="list-none flex items-center px-5 mt-8 text-lg font-light flex-wrap gap-1">
             <li className="flex items-center group transition-all hover:text-yellow-700 cursor-pointer duration-200">
                 <a onClick={()=>setSelectedCategory(null)} className="flex items-center gap-1">
-                <span>{'All'}</span>
+                <span>Products</span>
                 </a>
             </li>
 

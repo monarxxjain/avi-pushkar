@@ -4,7 +4,7 @@ export type Product = {
     slug: {
       current: string;
     };
-    price?: number;
+    price: number;
     description?: string;
     thumbnailImage?: {
       asset: {

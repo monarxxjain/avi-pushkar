@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react"
+import { Instagram, ShoppingCart } from "lucide-react"
 import Link from "next/link"
 
 export const Navbar = () => {
@@ -10,13 +10,13 @@ export const Navbar = () => {
                     <ul className="flex space-x-6 font-medium">
                         <li className="hover:text-yellow-700 transition-colors duration-200"><Link href={'/'}>Home</Link></li>
                         <li className="hover:text-yellow-700 transition-colors duration-200"><Link href={'/products'}>Products</Link></li>
-                        <li className="hover:text-yellow-700 transition-colors duration-200"><Link href={'/about-us'}>About Us</Link></li>
-                        <li className="hover:text-yellow-700 transition-colors duration-200"><Link href={'/contact'}>Contact</Link></li>
+                        <li className="hover:text-yellow-700 transition-colors duration-200"><Link href={'/about'}>About Us</Link></li>
                     </ul>
                 </div>
                 <div>
-                    <ul className="flex space-x-6 hover:text-pink-700 text-yellow-700 hover:scale-105 transition-all">
-                        <li><a href="https://www.instagram.com/avijugglingpushkar/"><Instagram /></a></li>
+                    <ul className="flex space-x-6 text-yellow-700 ">
+                        <li className="hover:text-pink-700 hover:scale-105 transition-all"><a href="https://www.instagram.com/avi_pushkar" target="_blank"><Instagram /></a></li>
+                        <li className="hover:text-black hover:scale-105 transition-all cursor-pointer"><Link href={'/cart'}><ShoppingCart /></Link></li>
                     </ul>
                 </div>
             </div>

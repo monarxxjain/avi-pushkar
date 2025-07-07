@@ -57,3 +57,36 @@ export const removeFromCart = (productId: string) => {
   const cart = getCart().filter((item) => item.product._id !== productId);
   saveCart(cart);
 };
+
+
+export const generateInstagramCartMessage = (): string => {
+  const cart = getCart();
+
+  if (cart.length === 0) {
+    return "🛒 Your cart is empty!";
+  }
+
+  const lines: string[] = [];
+  
+  lines.push("Hello Avi! 👋");
+  lines.push("🛍️ *Order Summary*");
+  lines.push("-----------------------");
+
+  cart.forEach((item, index) => {
+    lines.push(
+      `${index + 1}. ${item.product.name} — ₹${item.product.price ?? 0} × ${item.quantity} = ₹${(item.product.price ?? 0) * item.quantity}`
+    );
+  });
+
+  const total = cart.reduce(
+    (sum, item) => sum + (item.product.price ?? 0) * item.quantity,
+    0
+  );
+
+  lines.push("-----------------------");
+  lines.push(`🧾 *Total:* ₹${total}`);
+  lines.push("");
+  lines.push("📩 Please confirm my order 🙌");
+
+  return lines.join("\n");
+};

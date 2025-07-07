@@ -2,6 +2,7 @@ import { urlFor } from "@/sanity/image";
 import { Product } from "@/types/products";
 import { addToCart, updateCartQuantity } from "@/utils/cart";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type Props = {
@@ -32,17 +33,19 @@ export const ProductCard = ({ product, quantity=0 }: Props) => {
   return (
     <div className="cursor-pointer transition-shadow duration-300">
       {product.thumbnailImage && (
-        <Image
-          src={urlFor(product.thumbnailImage).url()}
-          alt={product.name}
-          width={300}
-          height={200}
-          className="w-full h-auto"
-        />
+        <Link href={`/products/${product.slug.current}`}>
+          <Image
+            src={urlFor(product.thumbnailImage).url()}
+            alt={product.name}
+            width={300}
+            height={200}
+            className="w-full h-auto"
+          />
+        </Link>
       )}
 
       <div className="p-5">
-        <h2 className="font-light text-lg">{product.name}</h2>
+        <Link href={`/products/${product.slug.current}`} className="font-light text-lg w-full hover:underline">{product.name}</Link>
 
         <div className="flex justify-between items-center mt-1 py-2">
           <div className="text-gray-800">₹ {product.price} <span className="text-xs text-gray-500">( per Item )</span> </div>
