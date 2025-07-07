@@ -1,4 +1,4 @@
-export type SanityImage = {
+  export type SanityImage = {
     asset: {
       _ref: string;
       _type: string;
@@ -17,10 +17,6 @@ export type SanityImage = {
     title: string;
     slides: HeroSlide[];
   };
-
-  export type BestSellerType = {
-    
-  }
   
   export type HomePageContent = {
     title: string;

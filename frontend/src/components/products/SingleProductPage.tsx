@@ -1,7 +1,7 @@
 "use client";
 import { Product } from "@/types/products";
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { addToCart } from "@/utils/cart";
 import { urlFor } from "@/sanity/image";
 

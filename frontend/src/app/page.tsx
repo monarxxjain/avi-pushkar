@@ -2,12 +2,10 @@
 import { HeroSection } from "@/components/home/HeroSection";
 import { getContent } from "@/sanity/fetchContent/Home";
 import { useEffect, useState } from "react";
-import { BestSellerType, HeroSectionType, HomePageContent } from "@/types/home";
-import { BestSellers } from "@/components/home/BestSellers";
+import { HeroSectionType, HomePageContent } from "@/types/home";
 
 export default function Home() {
   const [heroSection, setHeroSection] = useState<HeroSectionType | null>(null);
-  const [bestSellers, setBestSellers] = useState<BestSellerType | []>([]);
 
   useEffect(() => {
     getContent()
@@ -20,11 +18,6 @@ export default function Home() {
         );
         setHeroSection(hero || null);
 
-        const best = data?.sections.find(
-          (section: any): section is BestSellerType =>
-            section._type === "bestSellers"
-        );
-        setBestSellers(best || []);
       })
       .catch((error) => {
         console.error("Failed to fetch home page content:", error);
@@ -35,7 +28,6 @@ export default function Home() {
   return (
     <>
       <HeroSection content={heroSection} />
-      {/* <BestSellers content={bestSellers} /> */}
     </>
   );
 }
