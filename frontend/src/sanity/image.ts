@@ -4,6 +4,7 @@ import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 const builder = imageUrlBuilder(client);
 
-export function urlFor(source: SanityImageSource) {
+export function urlFor(source: SanityImageSource | undefined) {
+  if (!source) throw new Error("Invalid image source");
   return builder.image(source);
 }
