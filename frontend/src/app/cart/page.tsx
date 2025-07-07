@@ -34,7 +34,7 @@ export default function Cart() {
     <section className="min-h-screen pt-[8vh] px-6 md:px-20 lg:px-32 py-12">
       <div className="text-center w-full mt-5">
         <div className="inline-block relative">
-          <h1 className="text-3xl border-b border-yellow-700 px-4 pb-2 font-semibold">
+          <h1 className="text-xl sm:text-3xl border-b border-yellow-700 px-4 pb-2 font-semibold">
             Your Cart
           </h1>
           <div className="absolute -bottom-1 h-2 w-2 bg-yellow-700 rounded-full" />
@@ -60,12 +60,12 @@ export default function Cart() {
 
       {cartItems.length > 0 && (
         <div className="border-t pt-6 flex justify-between items-center">
-          <div className="text-xl font-medium">Total:</div>
-          <div className="text-2xl font-semibold text-yellow-700">₹ {total}</div>
+          <div className="text-base sm:text-xl font-medium">Total:</div>
+          <div className="text-lg sm:text-2xl font-semibold text-yellow-700">₹ {total}</div>
         </div>
       )}
 
-      <button onClick={handleCopyMessage} className="mt-5 mx-auto py-2 w-full bg-white border border-yellow-600 text-yellow-600 text-xl rounded hover:bg-yellow-600 hover:text-white active:scale-95 cursor-pointer transition-all">
+      <button onClick={handleCopyMessage} className="mt-5 mx-auto py-1 sm:py-2 w-full bg-white border border-yellow-600 text-yellow-600 sm:text-xl rounded hover:bg-yellow-600 hover:text-white active:scale-95 cursor-pointer transition-all">
         Place Order
       </button>
     </section>

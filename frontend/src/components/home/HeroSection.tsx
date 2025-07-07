@@ -39,13 +39,13 @@ export const HeroSection = ({content} : Props) => {
                   style={{
                     backgroundImage: `url(${urlFor(item.image).url()})`,
                   }}
-                  className="flex mt-[8vh] flex-col bg-cover bg-center bg-no-repeat relative items-center justify-center h-full w-full"
+                  className="flex mt-[6vh] sm:mt-[8vh] flex-col bg-cover bg-center bg-no-repeat relative items-center justify-center h-full w-full"
                 >
                   <div className={`absolute top-0 left-0 p-12 md:p-20 lg:p-28 text-${item.color} max-w-[90%]`}>
                     <h1 className="text-2xl sm:text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">
                       {item.title}
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg drop-shadow-md max-w-1/2">
+                    <p className="text-sm sm:text-base md:text-lg drop-shadow-md sm:max-w-1/2">
                       {item.description}
                     </p>
                   </div>

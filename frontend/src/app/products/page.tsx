@@ -49,16 +49,16 @@ export default function Products() {
     },[selectedCategory])
 
     return (
-      <section className="relative w-full pt-[8vh]">
+      <section className="relative w-full pt-[6vh] sm:pt-[8vh]">
         {/* Fixed Sidebar */}
         <Sidebar productCategories={productCategories} setSelectedCategory={setSelectedCategory} />
   
         {/* Main Content Area */}
-        <div className="ml-[20%] px-12 h-[92vh] overflow-y-scroll ">
+        <div className="ml-[25%] sm:ml-[20%] px-6 md:px-12 h-[92vh] overflow-y-scroll ">
           <BreadCrumb selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
           
           
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-8 gap-y-12">
+          <div className="mt-5 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
           {displayProducts.map((product) => {
             const matchedCartItem = cartItems.find(
               (item) => item.product._id === product._id

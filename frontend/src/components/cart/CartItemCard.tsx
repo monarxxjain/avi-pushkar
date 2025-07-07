@@ -48,17 +48,17 @@ export const CartItemCard = ({ item, onQuantityChange }: Props) => {
       <div className="flex flex-col flex-1">
         <div className="flex justify-between">
             <Link href={`/products/${item.product.slug.current}`}>
-                <h3 className="text-lg font-light hover:underline">{item.product.name}</h3>
+                <h3 className="text-base sm:text-lg font-light hover:underline">{item.product.name}</h3>
                 <p className="text-sm text-gray-500 mb-2">₹ {item.product.price}</p>
             </Link>
-            <div className="mx-5">
-                ₹ {item.product.price * quantity}
+            <div className="text-sm sm:text-base mx-5">
+                <span className="flex">₹ {item.product.price * quantity}</span>
             </div>
         </div>
 
         <div className="flex justify-between items-center mt-auto">
-          <div className="flex items-center gap-2 border border-gray-300 rounded px-2">
-            <button onClick={handleDecrement} className="text-xl px-1 hover:text-yellow-600">−</button>
+          <div className="flex items-center sm:gap-2 border border-gray-300 rounded px-2 sm:text-xl">
+            <button onClick={handleDecrement} className="px-1 hover:text-yellow-600">−</button>
             <input
               type="number"
               min={0}
@@ -66,7 +66,7 @@ export const CartItemCard = ({ item, onQuantityChange }: Props) => {
               onChange={handleInputChange}
               className="w-10 text-center bg-transparent outline-none"
             />
-            <button onClick={handleIncrement} className="text-xl px-1 hover:text-yellow-600">+</button>
+            <button onClick={handleIncrement} className="px-1 hover:text-yellow-600">+</button>
           </div>
           <button
             onClick={() => {

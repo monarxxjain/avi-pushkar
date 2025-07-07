@@ -7,7 +7,7 @@ export default function AboutUsPage() {
             {/* Header */}
             <div className="text-center w-full mt-5">
                 <div className="inline-block relative">
-                    <h1 className="text-3xl border-b border-yellow-700 px-4 pb-2 font-semibold">
+                    <h1 className="text-xl sm:text-3xl border-b border-yellow-700 px-4 pb-2 font-semibold">
                         About Us
                     </h1>
                     <div className="absolute -bottom-1 h-2 w-2 bg-yellow-700 rounded-full" />
